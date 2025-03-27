@@ -57,26 +57,23 @@ body {
 }
 
 
-/* Hover Effect for Card */
 .card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-5px); /* Lifts card slightly */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Adds a shadow effect */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); 
 }
 
-/* Hover Effect for Image */
 .card img {
     transition: transform 0.3s ease;
 }
 
 .card:hover img {
-    transform: scale(1.05); /* Slightly enlarges image */
+    transform: scale(1.05);
 }
 
-/* Hover Effect for Text */
 .card h3,
 .card .tag,
 .card .desc {
@@ -84,7 +81,7 @@ body {
 }
 
 .card:hover h3 {
-    color: #0639af; /* Changes title color on hover */
+    color: #0639af;
 }
 
 .card:hover .desc {
