@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: rgb(255, 0, 0);
+}
+
+.model {
+    position: absolute;
+    top: 5rem;
+    left: 44vw;
+    font-weight: 700;
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.model-content {
+    height: 8rem;
+    width: 20rem;
+    font-weight: 600;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 5px 6px rgb(0, 0, 0, 0.8);
+    opacity: 0;
+    border-radius: 5%;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    z-index: 100;
+    align-items: center;
+}
+
+.closebtn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: black;
+}
+
+.closebtn:hover {
+    color: red;
+}
+
+.desc {
+    font-size: 1rem;
+    text-align: center;
+}
+
+.flex-div {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.flex-div a {
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    background-color: rgb(255, 0, 0);
+}
+
+.model-overlay{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+#model:target {
+    visibility: visible;
+    opacity: 1;
+}
+#model:target + .model-overlay {
+    visibility: visible;
+    opacity: 1;
+}
