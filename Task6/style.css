@@ -39,7 +39,7 @@ input[type=radio]{
     text-align: center;
     border-radius: 5%;
     box-shadow: 0 5px 6px rgba(0, 0, 0, 0.5);
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -55,4 +55,11 @@ input[type=radio]{
 {
     opacity: 1;
     transform: translateY(0);
+}
+
+#tab1:checked ~ nav .tab label[for="tab1"],
+#tab2:checked:checked ~ nav .tab label[for="tab2"],
+#tab3:checked:checked ~ nav .tab label[for="tab3"] {
+    color: rgb(255, 0, 0);
+    border-bottom: 1px solid white;
 }
