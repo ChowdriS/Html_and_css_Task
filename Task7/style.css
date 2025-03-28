@@ -1,0 +1,118 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(207, 232, 253);
+    padding: 1rem;
+    margin: 0;
+}
+
+.slider-container {
+    width: 90%;
+    max-width: 800px;
+    height: 60vh;
+    min-height: 300px;
+    margin: 2rem 0;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    background: #fff;
+}
+
+.slides {
+    display: flex;
+    width: 300%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    width: 33.3333%;
+    height: 100%;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.slide img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.auto-slider .slides {
+    animation: auto-slide 15s infinite;
+}
+
+@keyframes auto-slide {
+    0%, 33% { transform: translateX(0); }
+    34%, 66% { transform: translateX(-33.3333%); }
+    67%, 100% { transform: translateX(-66.6666%); }
+}
+
+.manual-slider input[type="radio"] {
+    display: none;
+}
+
+.manual-controls {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.75rem;
+    z-index: 2;
+}
+
+.manual-controls label {
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid white;
+}
+
+#manual-1:checked ~ .slides { transform: translateX(0); }
+#manual-2:checked ~ .slides { transform: translateX(-33.3333%); }
+#manual-3:checked ~ .slides { transform: translateX(-66.6666%); }
+
+#manual-1:checked ~ .manual-controls label:nth-child(1),
+#manual-2:checked ~ .manual-controls label:nth-child(2),
+#manual-3:checked ~ .manual-controls label:nth-child(3) {
+    background: rgba(0, 0, 0, 0.9);
+    transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+    .slider-container {
+        height: 50vh;
+        max-width: 90%;
+    }
+    
+    .manual-controls label {
+        width: 1rem;
+        height: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .slider-container {
+        height: 40vh;
+        min-height: 250px;
+    }
+    
+    .manual-controls {
+        bottom: 1rem;
+    }
+}
