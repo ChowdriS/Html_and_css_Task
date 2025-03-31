@@ -34,6 +34,16 @@ body{
     transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
 }
 
+#dummy{
+    visibility: hidden;
+}
+
+#dummy:checked ~ .submenu{
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
+}
+
 .navbar a {
     display: block;
     padding: 15px;
@@ -41,7 +51,7 @@ body{
     text-decoration: none;
 }
 
-.navbar a:hover {
+/* .navbar a:hover {
     background: #ff0000;
 }
 
@@ -49,7 +59,7 @@ body{
     opacity: 1;
     visibility: visible;
     z-index: 1;
-}
+} */
 
 @media (max-width:600px) {
     .navbar{
