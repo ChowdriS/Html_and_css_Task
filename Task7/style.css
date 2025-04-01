@@ -50,7 +50,7 @@ body {
 }
 
 .auto-slider .slides {
-    animation: auto-slide 15s infinite;
+    animation: auto-slide 7s infinite;
 }
 
 @keyframes auto-slide {

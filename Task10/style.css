@@ -9,11 +9,19 @@ body {
 }
 
 .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
     background: #007BFF;
     color: white;
     padding: 15px;
     text-align: center;
     width: 100%;
+}
+
+.mobile{
+    display: none;
 }
 
 .nav {
@@ -81,5 +89,28 @@ body:has(#contact:target) .nav a[href="#contact"] {
     .nav {
         flex-direction: column;
         align-items: center;
+    }
+    .mobile{
+        display: block;
+        position: fixed;
+        top:2em;
+        right: 1rem;
+    }
+    .mobile img{
+        height: 2rem;
+    }
+    input[type="checkbox"]{
+        visibility: hidden;
+    }
+    .nav{
+        opacity: 0;
+        height: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease-in-out;
+    }
+    #ham:checked ~ .nav{
+        opacity: 1;
+        visibility: visible;
+        height: auto;
     }
 }
