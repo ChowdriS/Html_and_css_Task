@@ -105,22 +105,22 @@ header {
 .overlay {
     height: 100%;
     width: 100%;
-    background-image: url(assets/isro\ hoodies.webp);
-    background-size: cover; 
-    background-position: center;
-    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
+    background-color: rgba(0, 0, 0, 0.5); 
 }
 
-.body-hero .right-section .shadow {
-    background-size: cover;
-    background-position: center;
-}
+
+.right-section .shadow:nth-child(1) { background-image: url(assets/isro\ hoodies.webp); }
+.right-section .shadow:nth-child(2) { background-image: url(assets/isro\ hoodies.webp); }
+.right-section .shadow:nth-child(3) { background-image: url(assets/isro\ hoodies.webp); }
+.right-section .shadow:nth-child(4) { background-image: url(assets/isro\ hoodies.webp); }
 
 .shadow {
+    background-size: cover;
+    background-position: center;
     box-shadow: 0 5px 6px rgba(0, 0, 0, 0.3);
 }
 
@@ -179,21 +179,12 @@ header {
 .product-image {
     height: 320px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     margin-bottom: 15px;
-    background-color: #f5f5f5;
-    border-radius: 4px;
     overflow: hidden;
     transition: all 0.3s ease;
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-}
-
-.product-image h2 {
-    font-size: 24px;
-    color: #333;
-    text-align: center;
-    padding: 20px;
 }
 
 .product-details {
